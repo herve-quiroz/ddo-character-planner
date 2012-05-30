@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.trancecode.ddo</groupId>
+  <artifactId>ddo-character-planner</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>war</packaging>
+  <name>${project.artifactId}</name>
+
+  <!-- ===================================================================== -->
+
+  <inceptionYear>2012</inceptionYear>
+
+  <licenses>
+    <license>
+      <name>Apache 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <ciManagement>
+    <system>Jenkins</system>
+    <url>http://ci.trancecode.org/job/ddo-character-planner</url>
+  </ciManagement>
+
+  <scm>
+    <connection>git://github.com/herve-quiroz/ddo-character-planner.git</connection>
+    <developerConnection>scm:git:file://${basedir}</developerConnection>
+    <url>https://github.com/herve-quiroz/ddo-character-planner</url>
+  </scm>
+
+  <!-- ===================================================================== -->
+
+  <developers>
+
+    <developer>
+      <name>Herve Quiroz</name>
+      <email>herve.quiroz@trancecode.org</email>
+    </developer>
+
+  </developers>
+
+  <!-- ===================================================================== -->
+
+  <repositories>
+
+    <repository>
+      <id>releases.trancecode.org</id>
+      <name>TranceCode repository for release artifacts</name>
+      <url>http://maven.trancecode.org/releases/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>snapshots.trancecode.org</id>
+      <name>TranceCode repository for snapshot artifacts</name>
+      <url>http://maven.trancecode.org/snapshots/</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+
+  </repositories>
+
+  <!-- ===================================================================== -->
+
+  <properties>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <test.quiet>true</test.quiet>
+    <surefire.vm.args />
+
+  </properties>
+
+  <!-- ===================================================================== -->
+
+  <dependencies>
+
+    <dependency>
+      <groupId>org.trancecode.web</groupId>
+      <artifactId>xslt-servlet</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+      <type>war</type>
+    </dependency>
+
+  </dependencies>
+
+  <!-- ===================================================================== -->
+
+  <build>
+
+    <extensions>
+
+      <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-ssh-external</artifactId>
+        <version>2.2</version>
+      </extension>
+
+    </extensions>
+
+    <plugins>
+
+      <plugin>
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>jetty-maven-plugin</artifactId>
+        <version>8.0.0.M3</version>
+        <configuration>
+          <scanIntervalSeconds>10</scanIntervalSeconds>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+  <!-- ===================================================================== -->
+
+</project>
