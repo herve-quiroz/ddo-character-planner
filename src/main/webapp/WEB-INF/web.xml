@@ -15,7 +15,7 @@
     </init-param>
     <init-param>
       <param-name>source-uri</param-name>
-      <param-value>/org.trancecode.ddo/rules.xml</param-value>
+      <param-value>/org.trancecode.ddo/choices.xml</param-value>
     </init-param>
     <init-param>
       <param-name>logging-level</param-name>

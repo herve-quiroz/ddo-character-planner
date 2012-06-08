@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ddo>
+  <choices last="0g">
+    <race name="Dwarf" id="01" />
+    <race name="Human" id="02" />
+    <class name="Fighter" id="03" />
+    <class name="Barbarian" id="04" />
+    <ability name="Strength" id="05">
+      <bonus target="Strength" value="1" />
+    </ability>
+    <ability name="Dexterity" id="06" />
+    <ability name="Consitution" id="07" />
+    <ability name="Intelligence" id="08" />
+    <ability name="Wisdom" id="09" />
+    <ability name="Charisma" id="0a" />
+    <skill name="Concentation (class skill)" id="0d">
+      <bonus target="Jump" value="1" />
+    </skill>
+    <skill name="Jump (class skill)" id="0b">
+      <bonus target="Jump" value="1" />
+    </skill>
+    <skill name="Jump (cross-class skill)" id="0c">
+      <bonus target="Jump" value="0.5" />
+    </skill>
+    <feat name="Discipline" id="0e">
+      <bonus target="Concentration" value="2" />
+      <bonus target="Will" value="1" />
+    </feat>
+    <feat name="Iron Will" id="0f">
+      <bonus target="Will" value="2" />
+    </feat>
+    <feat name="Skill focus: concentration" id="0g">
+      <bonus target="Concentration" value="3" />
+    </feat>
+  </choices>
+</ddo>
