@@ -6,7 +6,7 @@
   <xsl:output method="html" />
 
   <xsl:param name="name" />
-  <xsl:param name="context-url" as="xs:string" select="''" />
+  <xsl:param name="request.path" as="xs:string" select="''" />
 
   <xsl:variable name="ddo" select="/ddo" />
 
@@ -27,7 +27,7 @@
     </html>
   </xsl:template>
 
-  <xsl:variable name="data" as="xs:string" select="replace($context-url, '^.*/', '')" />
+  <xsl:variable name="data" as="xs:string" select="replace($request.path, '^.*/', '')" />
 
   <xsl:variable name="previous-choices" as="element()*">
     <xsl:for-each select="1 to string-length($data) div 2">
